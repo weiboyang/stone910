@@ -23,7 +23,7 @@
                     <marquee direction="left" onmouseover="this.stop()" onmouseout="this.start()">
                         <a href="#">Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!
                     </a>
-                            </marquee>
+                    </marquee>
                 </div>
 
             </div>
@@ -40,57 +40,47 @@
             </div>
         </div>
         <div class="bulk">
-            <div class="content">
-                <h2>Content</h2>
-
-
-            </div>
 
             <div class="sidebar">
-                <h2>Sidebar</h2>
+                <div class="title">Sidebar</div>
                 <div class="calc">
 
                     <div id="shipment_calc" style="display: block">
 
                         <div class="row">
 
-                            <label class="lbl">厚&nbsp;&nbsp;&nbsp;度mm&nbsp;</label>
+                            <label class="lbl">厚&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度&nbsp;(mm)&nbsp;</label>
                             <input id="Number1" type="number" style="width: 88px" value="" />
                         </div>
                         <div class="row">
-                            <label class="lbl">每吨运费&nbsp;元&nbsp;</label>
+                            <label class="lbl">每吨运费&nbsp;(元)&nbsp;</label>
                             <input id="Number2" type="number" style="width: 88px" value="" />
                         </div>
                         <div class="row">
-                            <label class="lbl">密度&nbsp;t/(m^3)&nbsp;</label>
+                            <label class="lbl">密&nbsp;&nbsp;&nbsp;&nbsp;度(t/(m^3))&nbsp;</label>
                             <input id="Number7" type="number" style="width: 88px" value="2.7" />
                         </div>
 
                         <div class="row">
-                            <label class="lbl">平方数&nbsp;m^2&nbsp;</label>
+                            <label class="lbl">平&nbsp;&nbsp;方&nbsp;&nbsp;数&nbsp;(m^2)&nbsp;</label>
                             <input id="Number3" type="number" style="width: 88px" value="" disabled />
                         </div>
                         <div class="row">
-                            <label class="lbl">平方运费&nbsp;元&nbsp;</label>
+                            <label class="lbl">平方运费&nbsp;(元)&nbsp;</label>
                             <input id="Number4" type="number" style="width: 88px" value="" disabled />
                         </div>
                         <div class="row">
-                            <label class="lbl">吨数&nbsp;T&nbsp;</label>
+                            <label class="lbl">重&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量&nbsp;( t )&nbsp;</label>
                             <input id="Number5" type="number" style="width: 88px" value="1" disabled>
                         </div>
                         <div class="row">
-                            <label class="lbl">厚度&nbsp;m&nbsp;</label>
+                            <label class="lbl">厚&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度&nbsp;(m)&nbsp;</label>
                             <input id="Number6" type="number" style="width: 88px" value="" disabled />
                         </div>
-
-
-
-
-
+                        <!--btn-->
                         <div class="row">
-                            <input id="confirm" type="button" value="计算" style="visibility: hidden" onclick="calc()" />
-                            <div onclick="calc()" style="cursor: pointer; margin-top: 5px; margin-left: 25px; margin-right: 25px; width: 170px; border-radius: 5px; background-color: orange; text-align: center"
-                                onkeydown="background-color:white;" onkeyup="background-color:orange;">
+                            <input id="confirm" type="button" value="计算" style="visibility: hidden" onclick="shipment_calc()" />
+                            <div class="btn" id="shipment_btn" onclick="shipment_calc()" onmouseover="btn_over('shipment_btn')" onmouseout="btn_out('shipment_btn')" onmouseup="btn_out('shipment_btn')">
                                 计算
                             </div>
                         </div>
@@ -100,33 +90,33 @@
 
                     </div>
 
-                    <div id="tons_calc" style="display: block; display: none;">
+                    <div id="tons_calc" style="display: none;">
 
                         <div class="row">
 
-                            <label class="lbl">厚&nbsp;&nbsp;&nbsp;度&nbsp;mm&nbsp;</label>
+                            <label class="lbl">厚&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度&nbsp;(mm)&nbsp;</label>
                             <input id="Number8" type="number" style="width: 88px" value="" />
                         </div>
                         <div class="row">
-                            <label class="lbl">平方数&nbsp;m^2&nbsp;</label>
+                            <label class="lbl">平&nbsp;&nbsp;方&nbsp;&nbsp;数&nbsp;(m^2)&nbsp;</label>
                             <input id="Number9" type="number" style="width: 88px" value="" />
                         </div>
                         <div class="row">
-                            <label class="lbl">密度&nbsp;t/(m^3)&nbsp;</label>
+                            <label class="lbl">密&nbsp;&nbsp;&nbsp;&nbsp;度(t/(m^3))&nbsp;</label>
                             <input id="Number10" type="number" style="width: 88px" value="2.7" />
                         </div>
                         <div class="row">
-                            <label class="lbl">重量&nbsp;T&nbsp;</label>
+                            <label class="lbl">重&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量&nbsp;( t )&nbsp;</label>
                             <input id="Number11" type="number" style="width: 88px" value="0" disabled>
                         </div>
                         <div class="row">
-                            <label class="lbl">累计重量&nbsp;T&nbsp;</label>
+                            <label class="lbl">累计重量&nbsp;( t )&nbsp;</label>
                             <input id="Number12" type="number" style="width: 88px" value="0" disabled>
                         </div>
 
                         <div class="row">
                             <input id="Button1" type="button" value="计算" style="visibility: hidden" onclick="ton_calc()" />
-                            <div onclick="ton_calc()" style="cursor: pointer; margin-top: 5px; margin-left: 25px; margin-right: 25px; width: 170px; border-radius: 5px; background-color: orange; text-align: center">
+                            <div class="btn" id="tons_btn" onclick="ton_calc()" onmouseover="btn_over('tons_btn')" onmouseout="btn_out('tons_btn')" onmouseup="btn_out('tons_btn')">
                                 计算
                             </div>
                         </div>
@@ -136,8 +126,16 @@
                 </div>
 
             </div>
+            <div class="content">
+                <div class="title">Content</div>
+
+
+            </div>
+
         </div>
         <div class="footer">
+            <br />
+            <p>福建省聚石网有限公司 2014-2018 版权所有 [京ICP备01000001号]</p>
         </div>
     </div>
 

@@ -32,10 +32,10 @@ function btn_tons_calc() {
 }
 
 
-function calc() {
+function shipment_calc() {
 
     //    alert("Hello!");
-    var tkmm;// = document.getElementById('Number1').value;//thickness in milimeter
+    var tkmm  = document.getElementById('Number1').value;//thickness in milimeter
     var ppt = document.getElementById('Number2').value;//density
     var cvr = document.getElementById('Number3').value;//Area coverage
     var cpc;// = document.getElementById('Number4').value;//shipment every quare meter
@@ -44,7 +44,7 @@ function calc() {
     var dns = document.getElementById('Number7').value;//density
 
     //    alert("Hello!" + "tkmm:'" + tkmm + "' ppt:'" + ppt + "' cvr:'" + cvr + "' cpc:'" + cpc + "' ts:'" + ts + "' tkm:'" + tkm + "' dns:'" + dns + "'");
-    var rst = validation(tkmm, ts, dns, ppt, cvr);
+    var rst = validation(tkmm, 1, dns, ppt, 1);
     switch (rst) {
         case 0:
             alert("Input numbers only!");
@@ -99,7 +99,12 @@ function ton_calc() {
 
 
 }
-
+function btn_over(btnName) {
+    document.getElementById(btnName).style = "border:2px solid White";
+}
+function btn_out(btnName){
+    document.getElementById(btnName).style = "border:0";
+}
 /*
 function createShortcut() {
     try {
