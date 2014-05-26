@@ -1,0 +1,155 @@
+@CHARSET "UTF-8";
+
+/***
+*Stylesheet for stone910.com
+*version 0.1
+*timestamp Friday, May 23rd, 2014
+*author Bryan.WEI, bryan.wei@hotmail.com, volving.net
+*
+*/
+/* Universal begins */
+ 
+.wrapper{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	border: 1px solid red;
+	
+	padding-top:0px;
+	padding-right:0;
+	padding-bottom:0;
+	padding-right:0;
+}
+
+.header {
+	margin-left:10px;
+	margin-right:10px;
+	width: 940px;
+	height:100px;
+	background-color:#efefef;
+}
+.logo{
+	width:100px;
+	height:100px;
+	background-image:url(../../img/logo.png);
+	border-radius:10px;
+	float:left;
+}
+
+.navagation ul li {
+	display:inline-block;
+}
+
+.sidebar{
+	float:left;
+	margin-left:10px;
+	margin-right:10px;
+	width:220px;
+}
+
+.content{
+	margin-left:6px;
+	margin-right:10px;
+
+    float:right;
+	width:710px;
+}
+
+.footer{
+	width:940px;
+	margin-left:10px;
+	margin-right:10px;
+	clear:both;
+}
+.header,.sidebar,.content,.footer{
+	border:1px solid red;
+	
+}
+/*Screen width no wider than 768px*/
+@media screen and (max-width:768px) {
+    .wrapper {
+        width: 768px;
+        margin:0px;
+    }
+
+    .header, .footer, .navigation {
+        width: 748px;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .navigation {
+        text-align:center;
+        background-image:none;
+        border-top-color:#bfbfbf;
+        border-top-style:double;
+        border-top-width:4px;
+        padding-top:20px;
+
+    }
+
+    .content, .sidebar {
+        margin-top:20px;
+        
+        padding-right: 10px;
+        padding-left: 10px;
+        
+        width: 728px;
+        margin-left:10px;
+        margin-right:10px;
+        float:left;
+    }
+
+    .contentMain {
+        margin-right: 30px;
+        margin-top: 0px;
+        width: 150px;
+        height: 394px;
+    }
+
+    .sidebar {
+        border-right: none;
+        boorder-top: 2px solid #e8e8e8;
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .overHyped {
+        margin-top: 0px;
+        margin-left: 50px;
+    }
+}
+/**************************************************************/
+
+
+
+
+
+/* Universal ends */
+/**************************************************************/
+/* Header begins */
+/* Header ends */
+/**************************************************************/
+/* Body begins */
+h1 {
+	border: 1px solid green;
+}
+/* Body ends */
+	border: 1px solid green;
+}
+/* Body ends */
+/**************************************************************/
+/* Bulk begins */
+/* Bulk ends */
+/**************************************************************/
+/* Banner begins */
+/* Banner ends */
+/**************************************************************/
+/* Footer begins */
+/* Footer ends */
+/**************************************************************/
+/* Ads begin */
+/* Ads end */
+/**************************************************************/

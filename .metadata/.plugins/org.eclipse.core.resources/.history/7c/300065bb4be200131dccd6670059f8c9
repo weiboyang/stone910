@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+
+/***
+*Stylesheet for stone910.com
+*version 0.1
+*timestamp Friday, May 23rd, 2014
+*author Bryan.WEI, bryan.wei@hotmail.com, volving.net
+*
+*/
+/* Universal begins */
+* {
+	padding: 0;
+	margin:auto;
+	width: 900px;
+	border:1px solid red;
+}
+.left {
+	width:
+
+/* Universal ends */
+/**************************************************************/
+/* Header begins */
+/* Header ends */
+/**************************************************************/
+/* Bulk begins */
+/* Bulk ends */
+/**************************************************************/
+/* Banner begins */
+/* Banner ends */
+/**************************************************************/
+/* Footer begins */
+/* Footer ends */
+/**************************************************************/
+/* Ads begin */
+/* Ads end */
+/**************************************************************/

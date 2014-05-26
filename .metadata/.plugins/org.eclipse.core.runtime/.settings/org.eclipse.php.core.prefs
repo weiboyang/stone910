@@ -1,0 +1,5 @@
+#Fri May 23 15:29:59 CST 2014
+org.eclipse.php.core.taskPriorities=NORMAL,HIGH,NORMAL,NORMAL
+eclipse.preferences.version=1
+org.eclipse.php.core.taskTags=TODO,FIXME,XXX,@todo
+org.eclipse.php.core.taskCaseSensitive=enabled

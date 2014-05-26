@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="img/favicon.ico" rel="shortcut icon" />
+    <title>聚石网 Stone910</title>
+
+    <link rel="stylesheet" href="src/css/stylesheet.css">
+    <script src="src/js/functions.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="banner">
+                <!--
+                <div id="title">石聚成山</div>
+                <div id="sub_title">石头就要你Stone910！</div>
+                -->
+                <div id="title">石头就要你&nbsp;&nbsp;Stone910！</div>
+                <div id="sub_title">&nbsp;</div>
+                <div id="message">
+                    <marquee direction="left" onmouseover="this.stop()" onmouseout="this.start()">
+                        <a href="#">Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!
+                    </a>
+                            </marquee>
+                </div>
+
+            </div>
+
+            <div class="navigation">
+                <ul>
+                    <!--
+                    <li style="width:70px;font-size:smaller;margin-top:5px;height:16px; color:yellow;" onclick="createShortcut()">捷径</li>
+                    <li style="width:70px;font-size:smaller;margin-top:5px;height:16px; color:yellow;" onclick="toDesktop()">捷径</li>
+                    -->
+                    <li onclick="btn_shipment_calc()">运费计算</li>
+                    <li onclick="btn_tons_calc()">吨位计算</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bulk">
+            <div class="content">
+                <h2>Content</h2>
+
+
+            </div>
+
+            <div class="sidebar">
+                <h2>Sidebar</h2>
+                <div class="calc">
+
+                    <div id="shipment_calc" style="display: block">
+
+                        <div class="row">
+
+                            <label class="lbl">厚&nbsp;&nbsp;&nbsp;度mm&nbsp;</label>
+                            <input id="Number1" type="number" style="width: 88px" value="" />
+                        </div>
+                        <div class="row">
+                            <label class="lbl">每吨运费&nbsp;元&nbsp;</label>
+                            <input id="Number2" type="number" style="width: 88px" value="" />
+                        </div>
+                        <div class="row">
+                            <label class="lbl">密度&nbsp;t/(m^3)&nbsp;</label>
+                            <input id="Number7" type="number" style="width: 88px" value="2.7" />
+                        </div>
+
+                        <div class="row">
+                            <label class="lbl">平方数&nbsp;m^2&nbsp;</label>
+                            <input id="Number3" type="number" style="width: 88px" value="" disabled />
+                        </div>
+                        <div class="row">
+                            <label class="lbl">平方运费&nbsp;元&nbsp;</label>
+                            <input id="Number4" type="number" style="width: 88px" value="" disabled />
+                        </div>
+                        <div class="row">
+                            <label class="lbl">吨数&nbsp;T&nbsp;</label>
+                            <input id="Number5" type="number" style="width: 88px" value="1" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="lbl">厚度&nbsp;m&nbsp;</label>
+                            <input id="Number6" type="number" style="width: 88px" value="" disabled />
+                        </div>
+
+
+
+
+
+                        <div class="row">
+                            <input id="confirm" type="button" value="计算" style="visibility: hidden" onclick="calc()" />
+                            <div onclick="calc()" style="cursor: pointer; margin-top: 5px; margin-left: 25px; margin-right: 25px; width: 170px; border-radius: 5px; background-color: orange; text-align: center"
+                                onkeydown="background-color:white;" onkeyup="background-color:orange;">
+                                计算
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div id="tons_calc" style="display: block; display: none;">
+
+                        <div class="row">
+
+                            <label class="lbl">厚&nbsp;&nbsp;&nbsp;度&nbsp;mm&nbsp;</label>
+                            <input id="Number8" type="number" style="width: 88px" value="" />
+                        </div>
+                        <div class="row">
+                            <label class="lbl">平方数&nbsp;m^2&nbsp;</label>
+                            <input id="Number9" type="number" style="width: 88px" value="" />
+                        </div>
+                        <div class="row">
+                            <label class="lbl">密度&nbsp;t/(m^3)&nbsp;</label>
+                            <input id="Number10" type="number" style="width: 88px" value="2.7" />
+                        </div>
+                        <div class="row">
+                            <label class="lbl">重量&nbsp;T&nbsp;</label>
+                            <input id="Number11" type="number" style="width: 88px" value="0" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="lbl">累计重量&nbsp;T&nbsp;</label>
+                            <input id="Number12" type="number" style="width: 88px" value="0" disabled>
+                        </div>
+
+                        <div class="row">
+                            <input id="Button1" type="button" value="计算" style="visibility: hidden" onclick="ton_calc()" />
+                            <div onclick="ton_calc()" style="cursor: pointer; margin-top: 5px; margin-left: 25px; margin-right: 25px; width: 170px; border-radius: 5px; background-color: orange; text-align: center">
+                                计算
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+
+
+
+</body>
+</html>

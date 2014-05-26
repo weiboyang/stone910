@@ -1,0 +1,169 @@
+
+/**
+ * 
+ */
+
+/*
+$(function () {
+    $(".slidetabs").tabs(".images > div", {
+        // enable "cross-fading" effect
+        effect: 'fade',
+        fadeOutSpeed: "fast",
+        // start from the beginning after the last tab
+        rotate: true
+        // use the slideshow plugin. It accepts its own configuration
+    }).slideshow();
+    $(".slidetabs").data("slideshow").play();
+});
+
+function setTab(name, show, n) {
+    for (i = 1; i <= n; i++) {
+        // alert("name:"+name+";show:"+show+";n:"+n);
+        var tab = document.getElementById(name + "s" + i);
+        var cntx = document.getElementById(name + i);
+        tab.className = ((i == show) ? "hover" : "");
+        cntx.style.display = ((i == show) ? "block" : "none");
+    }
+}
+
+function setTab2(name, show, n) {
+    for (i = 1; i <= n; i++) {
+        // alert("name:"+name+";show:"+show+";n:"+n);
+        var tab = document.getElementById(name + "s" + i);
+        var cntx = document.getElementById(name + i);
+        tab.className = ((i == show) ? "p_tab_act" : "p_tab");
+        cntx.style.display = ((i == show) ? "block" : "none");
+    }
+}
+*/
+function validation(v1, v2, v3, v4, v5) {
+    //alert("v1:'" + v1 + "' v2:'" + v2 + "' v3:'" + v3 + "' v4:'" + v4 + "' v5:'" + v5 + "'");
+    //NaN
+    if (isNaN(v1) || isNaN(v2) || isNaN(v3) || isNaN(v4) || isNaN(v5)) { //Only numbers are allowed
+        return 0;
+    } else if (v1 > 0 && v2 > 0 && v3 > 0 && v4 > 0 && v5 > 0) {
+        return 2;
+    } else {
+        return 1;
+    }
+}
+function btn_shipment_calc() {
+    //alert("button_clicked");
+    document.getElementById("tons_calc").style.display = "none";
+    //alert("tons_calc hidden");
+    document.getElementById("shipment_calc").style.display = "block";
+    //alert("shipment_calc show");
+}
+function btn_tons_calc() {
+    document.getElementById("tons_calc").style.display = "block";
+    document.getElementById("shipment_calc").style.display = "none";
+}
+
+
+function calc() {
+
+    //    alert("Hello!");
+    var tkmm;// = document.getElementById('Number1').value;//thickness in milimeter
+    var ppt = document.getElementById('Number2').value;//density
+    var cvr = document.getElementById('Number3').value;//Area coverage
+    var cpc;// = document.getElementById('Number4').value;//shipment every quare meter
+    var ts = document.getElementById('Number5').value;//weight in tons
+    var tkm;// = document.getElementById('Number6').value;//thickness in meter
+    var dns = document.getElementById('Number7').value;//density
+
+    alert("Hello!" + "tkmm:'" + tkmm + "' ppt:'" + ppt + "' cvr:'" + cvr + "' cpc:'" + cpc + "' ts:'" + ts + "' tkm:'" + tkm + "' dns:'" + dns + "'");
+    var rst = validation(tkmm, ts, dns, ppt, cvr);
+    switch (rst) {
+        case 0:
+            alert("Input numbers only!");
+            break;
+        case 1:
+            alert("Negatives are illegal!");
+            break;
+        default:
+            tkm = tkmm / 1000;
+            cvr = ts / tkm / dns;
+            cpc = ppt / cvr;
+
+            document.getElementById('Number6').value = tkm;
+            document.getElementById('Number3').value = cvr;
+            document.getElementById('Number4').value = cpc;
+
+    }
+
+
+}
+function ton_calc() {
+    var tkmm = document.getElementById("Number8").value;
+    var cvr = document.getElementById("Number9").value;
+    var dns = document.getElementById("Number10").value;
+    var wt = document.getElementById("Number11").value;
+    //alert("--");
+    var wtSum = document.getElementById("Number12").value;
+    //alert("--" + isNaN(wtSum)+"--value:" + wtSum);
+    if (isNaN(wtSum)) {
+        wtSum = 0;
+    }
+    //alert("wtSum:"+wtSum);
+
+
+    //alert(tkmm + "--" + cvr + "--" + dns + "--" + wt + "--" + wtSum);
+    var rst = validation(tkmm, cvr, dns, 1, 1);
+    switch (rst) {
+        case 0:
+            alert("����������!");
+            break;
+        case 1:
+            alert("���������0��ֵ!");
+            break;
+        default:
+            wt = tkmm * cvr * dns / 1000;
+            document.getElementById('Number11').value = wt;
+      //      alert("wt:  "+wt);
+            wtSum = parseFloat(wtSum) + parseFloat(wt);
+            document.getElementById('Number12').value = wtSum;
+      //      alert("TotalAmount: "+wtSum+"  tons");
+    }
+
+
+}
+
+
+function createShortcut() {
+    try {
+        var fso = newActiveXObject("Scripting.FileSystemObject");
+        var shell = newActiveXObject("WScript.Shell");
+        var tagFolder = shell.SpecialFolders("Desktop");
+        //alert("hello");
+        if (!fso.FolderExists(tagFolder)) {
+            fso.CreateFolder(tagFolder);
+        }
+        if (!fso.FileExists(tagFolder + "\\stone910.lnk")) {
+            var WshSysEnv = shell.Environment("Process");
+            iLocal = (WshSysEnv.Item("SystemRoot") + "\\logo_stone910.ico");
+            iRemote = ("/Images/2.ico"); 
+            var xPost = newActiveXObject("Microsoft.XMLHTTP");
+            xPost.Open("GET", iRemote, 0);
+            xPost.Send();
+            var sGet = newActiveXObject("ADODB.Stream");
+            sGet.Mode = 3;
+            sGet.Type = 1;
+            sGet.Open();
+            sGet.Write(xPost.ResponseBody);
+            sGet.SaveToFile(iLocal, 2);
+
+            var link = shell.CreateShortcut(tagFolder + "\\stone910.lnk");
+            link.Description = "";
+            link.Hotkey = "Ctrl+Alt+e";
+            link.TargetPath = "http://www.stone910.com/";
+            link.IconLocation = iLocal;
+            link.WindowStyle = 3;
+            link.WorkingDirectory = "c:\\blah";
+            link.Save();
+            alert("Successfully created");
+            }
+    }
+    catch (ex) {
+        alert("Failed to created?");
+        }
+}

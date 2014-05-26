@@ -1,0 +1,34 @@
+/**
+ * 
+ */
+$(function() {
+	$(".slidetabs").tabs(".images > div", {
+		// enable "cross-fading" effect
+		effect : 'fade',
+		fadeOutSpeed : "fast",
+		// start from the beginning after the last tab
+		rotate : true
+	// use the slideshow plugin. It accepts its own configuration
+	}).slideshow();
+	$(".slidetabs").data("slideshow").play();
+});
+
+function setTab(name, show, n) {
+	for (i = 1; i <= n; i++) {
+		// alert("name:"+name+";show:"+show+";n:"+n);
+		var tab = document.getElementById(name + "s" + i);
+		var cntx = document.getElementById(name + i);
+		tab.className = ((i == show) ? "hover" : "");
+		cntx.style.display = ((i == show) ? "block" : "none");
+	}
+}
+
+function setTab2(name, show, n) {
+	for (i = 1; i <= n; i++) {
+		// alert("name:"+name+";show:"+show+";n:"+n);
+		var tab = document.getElementById(name + "s" + i);
+		var cntx = document.getElementById(name + i);
+		tab.className = ((i == show) ? "p_tab_act" : "p_tab");
+		cntx.style.display = ((i == show) ? "block" : "none");
+	}
+}

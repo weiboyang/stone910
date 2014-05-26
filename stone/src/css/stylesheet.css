@@ -1,0 +1,306 @@
+@CHARSET "UTF-8";
+
+/***
+*Stylesheet for stone910.com
+*version 0.1
+*timestamp Friday, May 23rd, 2014
+*author Bryan.WEI, bryan.wei@hotmail.com, volving.net
+*
+*/
+/* Universal begins */
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    padding-top: 0px;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+.header {
+    margin-left: 10px;
+    margin-right: 10px;
+    /*    margin-bottom: 10px;
+*/
+    width: 940px;
+    height: 130px;
+    text-align: center;
+    vertical-align: middle;
+    display: block;
+}
+
+.logo {
+    width: 190px;
+    height: 100px;
+    background-image: url(../../img/logo_header.png);
+    border-radius: 10px;
+    float: left;
+}
+
+.banner {
+    width: 750px;
+    height: 100px;
+    float: left;
+    vertical-align: middle;
+    background-color: violet;
+}
+
+#title {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Microsoft YaHei',Arial;
+    color: #0094ff;
+    margin-top: 15px;
+    background-color: green;
+}
+
+#sub_title {
+    font-size: 1em;
+    font-family: 'Microsoft YaHei UI';
+    color: #808080;
+    margin-top: 2px;
+}
+
+#message {
+    marquee-speed: normal;
+    marquee-loop: infinite;
+    marquee-direction: forward;
+    marquee-style: slide;
+    height: 18px;
+    font-size: .9em;
+    width: inherit;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /*
+    margin-bottom:2px;
+    margin-left:2px;
+    */
+    text-align: left;
+    font-family: "Microsoft YaHei UI",Arial;
+    color: coral;
+    background-color: blue;
+    /*float:left;*/
+}
+
+    #message a {
+        color: coral;
+        text-decoration: none;
+    }
+
+.navigation {
+    width: 940px;
+    height: 28px;
+    float: left;
+    padding-left: 0;
+    background-image: url(../../img/bg-menu-list.png);
+    background-repeat: repeat-x;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+    .navigation ul {
+        margin-left: 0px;
+        height: 28px;
+        float: left;
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 2px;
+        margin-right: 0px;
+    }
+
+        .navigation ul li {
+            /*
+            background-color: yellow;
+            */
+            height: 24px;
+            width: 90px;
+            vertical-align: central;
+            /*
+                display: inline-block;
+            */
+            display: block;
+            float: left;
+            margin-left: -36px;
+            margin-right: 36px;
+            //border:1px solid blue;
+            font-family: 'Microsoft YaHei UI',Arial,'Times New Roman';
+            color: #e8e8e8;
+        }
+
+            .navigation ul li a {
+                text-decoration: none;
+                font-family: 'Microsoft YaHei UI',Arial,'Times New Roman';
+                color: #e8e8e8;
+            }
+
+            .navigation ul li:hover {
+                color: #0094ff;
+                cursor: pointer;
+                background-color: aquamarine;
+            }
+
+.bulk {
+    width: 940px;
+    min-height: 400px;
+    clear: both;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: -3px;
+    //background-color: #0094ff;
+}
+
+.sidebar {
+    float: left;
+    width: 225px;
+    height: auto;
+    background-color: #ff6a00;
+}
+
+    .sidebar .calc {
+        width: 220px;
+        height: 400px;
+        margin-top: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        padding-left: 5px;
+    }
+
+        .sidebar .calc .row {
+            width: 220px;
+            clear: left;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+            .sidebar .calc .row .lbl {
+                width: 114px;
+                font-size: .8em;
+                font-weight: bold;
+                float: left;
+                font-family: 'Microsoft YaHei UI';
+                color: black;
+            }
+
+            .sidebar .calc .row .cat {
+                width: 80px;
+                background-color: yellow;
+                float: left;
+            }
+
+            .sidebar .calc .row .unit {
+                width: 30px;
+                float: left;
+            }
+
+.content {
+    margin-left: 5px;
+    float: right;
+    width: 710px;
+    height: 480px;
+    background-color: #ff6a00;
+}
+
+.calc {
+    border-radius: 5px;
+    width: 220px;
+    float: left;
+}
+
+
+
+.footer {
+    width: 940px;
+    height: 40px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    text-align: center;
+    background-color: #ff6a00;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+/*Screen width no wider than 768px*/
+@media screen and (max-width:768px) {
+    .wrapper {
+        width: 768px;
+        margin: 0px;
+    }
+
+    .header, .footer, .navigation {
+        width: 748px;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .navigation {
+        text-align: center;
+        background-image: none;
+        border-top-color: #bfbfbf;
+        border-top-style: double;
+        border-top-width: 4px;
+        padding-top: 20px;
+    }
+
+    .content, .sidebar {
+        margin-top: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 728px;
+        margin-left: 10px;
+        margin-right: 10px;
+        float: left;
+    }
+
+    .contentMain {
+        margin-right: 30px;
+        margin-top: 0px;
+        width: 150px;
+        height: 394px;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-top: 2px solid #e8e8e8;
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .overHyped {
+        margin-top: 0px;
+        margin-left: 50px;
+    }
+}
+
+/**************************************************************/
+/* Universal ends */
+/**************************************************************/
+/* Header begins */
+/* Header ends */
+/**************************************************************/
+/* Body begins */
+
+/* Body ends */
+/**************************************************************/
+/* Bulk begins */
+/* Bulk ends */
+/**************************************************************/
+/* Banner begins */
+/* Banner ends */
+/**************************************************************/
+/* Footer begins */
+/* Footer ends */
+/**************************************************************/
+/* Ads begin */
+/* Ads end */
+/**************************************************************/
