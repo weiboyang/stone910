@@ -1,41 +1,13 @@
 
-/**
- * 
- */
-
-/*
-$(function () {
-    $(".slidetabs").tabs(".images > div", {
-        // enable "cross-fading" effect
-        effect: 'fade',
-        fadeOutSpeed: "fast",
-        // start from the beginning after the last tab
-        rotate: true
-        // use the slideshow plugin. It accepts its own configuration
-    }).slideshow();
-    $(".slidetabs").data("slideshow").play();
-});
-
-function setTab(name, show, n) {
-    for (i = 1; i <= n; i++) {
-        // alert("name:"+name+";show:"+show+";n:"+n);
-        var tab = document.getElementById(name + "s" + i);
-        var cntx = document.getElementById(name + i);
-        tab.className = ((i == show) ? "hover" : "");
-        cntx.style.display = ((i == show) ? "block" : "none");
-    }
-}
-
-function setTab2(name, show, n) {
-    for (i = 1; i <= n; i++) {
-        // alert("name:"+name+";show:"+show+";n:"+n);
-        var tab = document.getElementById(name + "s" + i);
-        var cntx = document.getElementById(name + i);
-        tab.className = ((i == show) ? "p_tab_act" : "p_tab");
-        cntx.style.display = ((i == show) ? "block" : "none");
-    }
-}
+/***
+*JavaScript for stone910.com
+*version 0.1
+*timestamp Friday, May 23rd, 2014
+*author Bryan.WEI, bryan.wei@hotmail.com, volving.net
+*
 */
+
+
 function validation(v1, v2, v3, v4, v5) {
     //alert("v1:'" + v1 + "' v2:'" + v2 + "' v3:'" + v3 + "' v4:'" + v4 + "' v5:'" + v5 + "'");
     //NaN
@@ -71,7 +43,7 @@ function calc() {
     var tkm;// = document.getElementById('Number6').value;//thickness in meter
     var dns = document.getElementById('Number7').value;//density
 
-//    alert("Hello!" + "tkmm:'" + tkmm + "' ppt:'" + ppt + "' cvr:'" + cvr + "' cpc:'" + cpc + "' ts:'" + ts + "' tkm:'" + tkm + "' dns:'" + dns + "'");
+    //    alert("Hello!" + "tkmm:'" + tkmm + "' ppt:'" + ppt + "' cvr:'" + cvr + "' cpc:'" + cpc + "' ts:'" + ts + "' tkm:'" + tkm + "' dns:'" + dns + "'");
     var rst = validation(tkmm, ts, dns, ppt, cvr);
     switch (rst) {
         case 0:
@@ -119,10 +91,10 @@ function ton_calc() {
         default:
             wt = tkmm * cvr * dns / 1000;
             document.getElementById('Number11').value = wt;
-      //      alert("wt:  "+wt);
+            //      alert("wt:  "+wt);
             wtSum = parseFloat(wtSum) + parseFloat(wt);
             document.getElementById('Number12').value = wtSum;
-      //      alert("TotalAmount: "+wtSum+"  tons");
+            //      alert("TotalAmount: "+wtSum+"  tons");
     }
 
 
@@ -168,4 +140,44 @@ function createShortcut() {
         }
 }
 
+*/
+
+
+
+/**
+ * 
+ */
+
+/*
+$(function () {
+    $(".slidetabs").tabs(".images > div", {
+        // enable "cross-fading" effect
+        effect: 'fade',
+        fadeOutSpeed: "fast",
+        // start from the beginning after the last tab
+        rotate: true
+        // use the slideshow plugin. It accepts its own configuration
+    }).slideshow();
+    $(".slidetabs").data("slideshow").play();
+});
+
+function setTab(name, show, n) {
+    for (i = 1; i <= n; i++) {
+        // alert("name:"+name+";show:"+show+";n:"+n);
+        var tab = document.getElementById(name + "s" + i);
+        var cntx = document.getElementById(name + i);
+        tab.className = ((i == show) ? "hover" : "");
+        cntx.style.display = ((i == show) ? "block" : "none");
+    }
+}
+
+function setTab2(name, show, n) {
+    for (i = 1; i <= n; i++) {
+        // alert("name:"+name+";show:"+show+";n:"+n);
+        var tab = document.getElementById(name + "s" + i);
+        var cntx = document.getElementById(name + i);
+        tab.className = ((i == show) ? "p_tab_act" : "p_tab");
+        cntx.style.display = ((i == show) ? "block" : "none");
+    }
+}
 */
