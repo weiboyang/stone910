@@ -55,7 +55,7 @@ p {
 }
 
 .banner {
-    width: 750px;
+    width: 746px;
 }
 
 #title {
@@ -140,7 +140,11 @@ p {
     clear:both;
     height:auto;
 }
-
+.calc {
+    border-radius: 5px;
+    width: 220px;
+    float: left;
+}
 .sidebar {
     float: left;
     width: 225px;
@@ -148,7 +152,7 @@ p {
     background-color: #ff6a00;
 }
     .sidebar .title,.sidebar .calc {
-        width: /*220px*/23.404255%;
+        width: /*220px*/220px;
         height: auto;
         margin-top: 5px;
         margin-left:5px;
@@ -156,9 +160,14 @@ p {
     .sidebar .title, .content .title {
         margin-top:5px;
         margin-left:5px;
+        margin-right:5px;
         border-bottom:1px solid lawngreen;
         font-size: 1.3em;
         font-weight: bold;
+    }
+    .sidebar .message, .content .message {
+        margin-top:5px;
+
     }
     .sidebar .title {
         width: 96%;
@@ -196,16 +205,24 @@ p {
 .content {
     margin-left: 2px;
     float: right;
-    width: 713px;
+    width: 712px;
     min-height: 400px;
     height:auto;
     background-color: #ff6a00;
 }
 
-.calc {
-    border-radius: 5px;
-    width: 220px;
-    float: left;
+.lists ul li {
+    display:block;
+    color:yellow;
+    background-image:url(../../img/arrow.png);
+    background-position:left center;
+    background-repeat:no-repeat;
+    padding-left:14px;
+}
+
+.lists ul li:hover {
+    cursor:pointer;
+    color:white;
 }
 
 
@@ -234,7 +251,10 @@ p {
     color:white;
     
 }
-
+    .footer p {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
 .bd {
     border: 2px solid red;
 }

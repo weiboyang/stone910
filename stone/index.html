@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <link href="img/favicon.ico" rel="shortcut icon" />
     <title>聚石网 Stone910</title>
 
@@ -16,13 +17,18 @@
                 <!--
                 <div id="title">石聚成山</div>
                 <div id="sub_title">石头就要你Stone910！</div>
-                -->
                 <div id="title">石头就要你&nbsp;&nbsp;Stone910！</div>
                 <div id="sub_title">&nbsp;</div>
+                    
+                    
+                -->
+                <div id="title">&nbsp;</div>
+                <div id="sub_title">&nbsp;</div>
+                
                 <div id="message">
                     <marquee direction="left" onmouseover="this.stop()" onmouseout="this.start()">
-                        <a href="#">Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!Hello,world!
-                    </a>
+                        <!--<a href="#">聚石网，聚四海名石资讯，汇八方石业英才</a>
+                        -->
                     </marquee>
                 </div>
 
@@ -32,8 +38,11 @@
                 <ul>
                     <!--
                     <li style="width:70px;font-size:smaller;margin-top:5px;height:16px; color:yellow;" onclick="createShortcut()">捷径</li>
-                    <li style="width:70px;font-size:smaller;margin-top:5px;height:16px; color:yellow;" onclick="toDesktop()">捷径</li>
+                    
                     -->
+
+
+                    <li style="width: 70px; font-size: smaller; height: 16px; color: yellow;" onclick="AddFavorite(window.location,document.title)">收藏本站</li>
                     <li onclick="btn_shipment_calc()">运费计算</li>
                     <li onclick="btn_tons_calc()">吨位计算</li>
                 </ul>
@@ -42,13 +51,14 @@
         <div class="bulk">
 
             <div class="sidebar">
-                <div class="title">Sidebar</div>
-                <div class="calc">
 
+                <div class="title" id="title_shipment_calc">运费计算</div>
+
+                <div class="title" id="title_tons_calc" style="display: none">吨位计算</div>
+                <div class="calc">
                     <div id="shipment_calc" style="display: block">
 
                         <div class="row">
-
                             <label class="lbl">厚&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度&nbsp;(mm)&nbsp;</label>
                             <input id="Number1" type="number" style="width: 88px" value="" />
                         </div>
@@ -79,6 +89,8 @@
                         </div>
                         <!--btn-->
                         <div class="row">
+                            <p style="color: yellow; font-size: smaller">毛板（大板）的密度建议使用3吨/m3,成品板密度建议使用2.7吨/m3</p>
+
                             <input id="confirm" type="button" value="计算" style="visibility: hidden" onclick="shipment_calc()" />
                             <div class="btn" id="shipment_btn" onclick="shipment_calc()" onmouseover="btn_over('shipment_btn')" onmouseout="btn_out('shipment_btn')" onmouseup="btn_out('shipment_btn')">
                                 计算
@@ -115,7 +127,7 @@
                         </div>
 
                         <div class="row">
-                            <input id="Button1" type="button" value="计算" style="visibility: hidden" onclick="ton_calc()" />
+                            <p style="color: yellow; font-size: smaller">毛板（大板）的密度建议使用3吨/m3,成品板密度建议使用2.7吨/m3</p>
                             <div class="btn" id="tons_btn" onclick="ton_calc()" onmouseover="btn_over('tons_btn')" onmouseout="btn_out('tons_btn')" onmouseup="btn_out('tons_btn')">
                                 计算
                             </div>
@@ -127,17 +139,45 @@
 
             </div>
             <div class="content">
-                <div class="title">Content</div>
+                <!--
+                <div class="title">
+                   
+                </div>
+                -->
+                <div class="lists">
+                    <ul>
+                        <li>近期推出石业发货单打印助手，欢迎继续关注</li>
+                    </ul>
 
+
+
+                </div>
 
             </div>
 
         </div>
         <div class="footer">
-            <br />
-            <p>福建省聚石网有限公司 2014-2018 版权所有 [京ICP备01000001号]</p>
+            <p><a href=mailto:1918173388@qq.com>发Email告诉我您的需求</a></p>
+            <p>xxxx有限公司 2014-2018 版权所有 [京ICP备01xxxxxx号]</p>
+            
+            <p>
+                <!-- GoStats JavaScript Based Code -->
+                <script type="text/javascript" src="http://gostats.cn/js/counter.js"></script>
+                <script type="text/javascript">_gos = 'monster.gostats.cn'; _goa = 472331;
+                    _got = 7; _goi = 4; _goz = 0; _god = 'hosts'; _gol = '计数器代码'; _GoStatsRun();</script>
+                <noscript>
+                    <a target="_blank" title="计数器代码"
+                        href="http://gostats.cn">
+                        <img alt="计数器代码"
+                            src="http://monster.gostats.cn/bin/count/a_472331/t_7/i_4/z_0/show_hosts/counter.png"
+                            style="border-width: 0" /></a>
+                </noscript>
+                <!-- End GoStats JavaScript Based Code -->
+            </p>
+
         </div>
     </div>
+
 
 
 

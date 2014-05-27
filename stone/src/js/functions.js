@@ -21,21 +21,27 @@ function validation(v1, v2, v3, v4, v5) {
 }
 function btn_shipment_calc() {
     //alert("button_clicked");
+    document.getElementById("shipment_calc").style.display = "block";
     document.getElementById("tons_calc").style.display = "none";
     //alert("tons_calc hidden");
-    document.getElementById("shipment_calc").style.display = "block";
+    document.getElementById("title_shipment_calc").style.display = "block";
+    document.getElementById("title_tons_calc").style.display = "none";
+    //alert("tons_calc hidden");
     //alert("shipment_calc show");
 }
 function btn_tons_calc() {
     document.getElementById("tons_calc").style.display = "block";
     document.getElementById("shipment_calc").style.display = "none";
+
+    document.getElementById("title_tons_calc").style.display = "block";
+    document.getElementById("title_shipment_calc").style.display = "none";
 }
 
 
 function shipment_calc() {
 
     //    alert("Hello!");
-    var tkmm  = document.getElementById('Number1').value;//thickness in milimeter
+    var tkmm = document.getElementById('Number1').value;//thickness in milimeter
     var ppt = document.getElementById('Number2').value;//density
     var cvr = document.getElementById('Number3').value;//Area coverage
     var cpc;// = document.getElementById('Number4').value;//shipment every quare meter
@@ -102,8 +108,37 @@ function ton_calc() {
 function btn_over(btnName) {
     document.getElementById(btnName).style = "border:2px solid White";
 }
-function btn_out(btnName){
+function btn_out(btnName) {
     document.getElementById(btnName).style = "border:0";
+}
+
+function addfavorite() {
+    var title = '聚石网';
+    var url = 'http://www.stone910.com';
+    alert("sb!");
+    try {
+        window.external.addFavorite(url, title);
+    }
+    catch (e1) {
+        try {
+            window.external.addToFavoritesBar(url, title);
+        }
+        catch (e2) {
+            alert('加入收藏失败，请您手工加入。')
+        }
+    }
+    /*
+    window.external.AddFavorite(location.href, document.title);
+    
+    if (document.all) 
+    { 
+        window.external.addFavorite("http://www.stone910.com","聚石网"); 
+    } 
+    else if (window.sidebar) 
+    { 
+        window.sidebar.addPanel("聚石网","http://www.stone910.com", ""); 
+    } 
+    */
 }
 /*
 function createShortcut() {
@@ -186,3 +221,39 @@ function setTab2(name, show, n) {
     }
 }
 */
+function add_fav() {
+    //var strHref = window.location.href;
+    //this.style.behavior = 'url fault#homepage)';
+    //this.setHomePage('http://www.stone910.com');
+}
+/*
+<a href="#" onclick="AddFavorite(window.location,document.title)">加收藏</a>
+<a href="#" onclick="SetHome(this,window.location)">设首页</a>
+*/
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle);
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "");
+        } catch (e) {
+            alert("Adding failed, please press Ctrl+D to add!");
+        }
+    }
+}
+
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = 'url(#default#homepage)'; obj.setHomePage(vrl);
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+            } catch (e) {
+                alert("Browser rejected!\n Input 'about:config' into url textbox and press ENTER. Set the value of [signed.applets.codebase_principal_support] to 'true'!");
+            }
+            var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref('browser.startup.homepage', vrl);
+        }
+    }
+}
